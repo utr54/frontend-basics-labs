@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Лабораторна робота №2: таблиця HTML та світлофори засобами CSS. Варіант 21.">
+    <title>Кашин Олександр Романович, ІК-44 – ЛР №2, варіант 21</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        :root {
+            /* nn = 21; */
+            --first-row-color: #218f8f;
+            --second-row-color: #f5f521;
+        }
+
+        .table-scroll {
+            overflow-x: auto;
+        }
+
+        .variant-table {
+            width: 100%;
+            min-width: 760px;
+            border-collapse: collapse;
+            table-layout: fixed;
+            text-align: center;
+        }
+
+        .variant-table .quarter {
+            width: 25%;
+        }
+
+        .variant-table .eighth {
+            width: 12.5%;
+        }
+
+        .variant-table td {
+            height: 72px;
+            padding: 8px;
+            border: 2px solid #111;
+            font-size: 18px;
+            font-weight: 600;
+            overflow-wrap: anywhere;
+            transition: background-color 180ms ease;
+        }
+
+        .name-band td {
+            background-color: var(--first-row-color);
+        }
+
+        .details-band td {
+            background-color: var(--second-row-color);
+        }
+
+        /* При наведенні фонові кольори міняються місцями. */
+        .name-band:hover td {
+            background-color: var(--second-row-color);
+        }
+
+        .details-band:hover td {
+            background-color: var(--first-row-color);
+        }
+
+        .visually-hidden {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            overflow: hidden;
+            clip: rect(0, 0, 0, 0);
+            white-space: nowrap;
+            clip-path: inset(50%);
+        }
+    </style>
+</head>
+<body>
+    <main class="page">
+        <section aria-labelledby="table-heading">
+            <h2 id="table-heading">Завдання 1. Таблиця</h2>
+            <div class="table-scroll">
+                <table class="variant-table">
+                    <caption class="visually-hidden">Таблиця варіанта 21 з даними виконавця та лабораторної роботи</caption>
+                    <colgroup>
+                        <col class="quarter">
+                        <col class="quarter">
+                        <col class="quarter">
+                        <col class="eighth">
+                        <col class="eighth">
+                    </colgroup>
+
+                    <!-- Перший рядок: ПІБ у трьох окремих комірках. -->
+                    <tbody class="name-band">
+                        <tr>
+                            <td colspan="2" rowspan="2">Кашин</td>
+                            <td>Олександр</td>
+                            <td rowspan="2">Романович</td>
+                            <td rowspan="2" aria-hidden="true"></td>
+                        </tr>
+                        <tr>
+                            <td aria-hidden="true"></td>
+                        </tr>
+                    </tbody>
+
+                    <!-- Другий рядок: група, номер роботи, номер варіанта. -->
+                    <tbody class="details-band">
+                        <tr>
+                            <td>ІК-44</td>
+                            <td rowspan="2">Лабораторна №2</td>
+                            <td rowspan="2">Варіант 21</td>
+                            <td colspan="2" rowspan="2" aria-hidden="true"></td>
+                        </tr>
+                        <tr>
+                            <td aria-hidden="true"></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <section aria-labelledby="traffic-heading">
+            <h2 id="traffic-heading">Завдання 2. Світлофор</h2>
+            <div class="traffic-examples">
+                <figure>
+                    <figcaption>Спосіб 1 – <code>position</code></figcaption>
+                    <div class="traffic-light traffic-light--position" role="img" aria-label="Світлофор з червоним, жовтим і зеленим сигналами; створений за допомогою position">
+                        <div class="lamp lamp--red"></div>
+                        <div class="lamp lamp--yellow"></div>
+                        <div class="lamp lamp--green"></div>
+                    </div>
+                </figure>
+
+                <figure>
+                    <figcaption>Спосіб 2 – <code>transform</code></figcaption>
+                    <div class="traffic-light traffic-light--transform" role="img" aria-label="Світлофор з червоним, жовтим і зеленим сигналами; створений за допомогою transform">
+                        <div class="lamp lamp--red"></div>
+                        <div class="lamp lamp--yellow"></div>
+                        <div class="lamp lamp--green"></div>
+                    </div>
+                </figure>
+            </div>
+        </section>
+    </main>
+</body>
+</html>

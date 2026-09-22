@@ -1,0 +1,116 @@
+:root {
+    /* Темний відтінок синього з орієнтиром на Adobe Color. */
+    --text-color: #080f2a;
+    --adobe-accent: #4c62fc;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background-color: #fff;
+    color: var(--text-color);
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.5;
+}
+
+.page {
+    max-width: 1120px;
+    margin: 0 auto;
+    padding: 32px 24px 56px;
+}
+
+section + section {
+    margin-top: 44px;
+}
+
+h2 {
+    margin: 0 0 12px;
+    font-size: 26px;
+    color: var(--adobe-accent);
+}
+
+.traffic-examples {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px 80px;
+    align-items: flex-start;
+}
+
+figure {
+    margin: 0;
+}
+
+figcaption {
+    margin-bottom: 16px;
+    font-size: 19px;
+    font-weight: 600;
+}
+
+.traffic-light {
+    width: 160px;
+    height: 374px;
+    border: 2px solid #111;
+    border-radius: 26px;
+    background-color: #e5e6e8;
+}
+
+.lamp {
+    width: 90px;
+    height: 90px;
+    border: 2px solid #111;
+    border-radius: 50%;
+}
+
+.lamp--red {
+    background-color: #f00;
+}
+
+.lamp--yellow {
+    background-color: #ff0;
+}
+
+.lamp--green {
+    background-color: #00a65a;
+}
+
+/* Спосіб 1: position. */
+.traffic-light--position {
+    position: relative;
+}
+
+.traffic-light--position .lamp {
+    position: absolute;
+    left: 33px;
+}
+
+.traffic-light--position .lamp:nth-child(1) {
+    top: 16px;
+}
+
+.traffic-light--position .lamp:nth-child(2) {
+    top: 141px;
+}
+
+.traffic-light--position .lamp:nth-child(3) {
+    top: 266px;
+}
+
+/* Спосіб 2: transform. */
+.traffic-light--transform {
+    padding-top: 16px;
+}
+
+.traffic-light--transform .lamp {
+    margin: 0 auto;
+}
+
+.traffic-light--transform .lamp:nth-child(2) {
+    transform: translateY(35px);
+}
+
+.traffic-light--transform .lamp:nth-child(3) {
+    transform: translateY(70px);
+}
