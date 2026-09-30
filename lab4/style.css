@@ -1,0 +1,22 @@
+#element-2,
+.element-3 {
+    cursor: pointer;
+}
+
+.city-image {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+#added-image-container {
+    margin-top: 10px;
+}
+
+.image-controls {
+    margin-top: 10px;
+}
+
+.image-controls button {
+    margin-right: 5px;
+}

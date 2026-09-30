@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="keywords" content="HTML5, CSS, JavaScript, Front-end, лабораторна робота, Кашин Олександр, ІК-44, ботанічний сад">
+    <meta name="description" content="Лабораторна робота №4. Робота з об'єктами HTML-документа та обробка подій JavaScript.">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Кашин О.Р., ІК-44 – лабораторна робота №4, варіант 21</title>
+
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <h2>Кашин Олександр Романович</h2>
+
+    <p id="element-2">
+        Дата народження: 13 травня 2007 року;<br>
+        Місце народження: м. Полтава.
+    </p>
+
+    <p class="element-3">
+        Освіта:<br>
+        Ліцей: ПМБЛ №1.<br>
+        Університет: НТУУ
+        «КПІ імені Ігоря Сікорського».
+    </p>
+
+    <h3>Мої хобі</h3>
+    <ul>
+        <li>Читання книжок</li>
+        <li>Волейбол</li>
+        <li>Комп'ютерні ігри</li>
+    </ul>
+
+    <h3>Мої улюблені фільми</h3>
+    <ol>
+        <li>"Термінатор", 1984</li>
+        <li>"Аватар", 2009</li>
+        <li>"Аватар: Легенда про Аанга", 2005</li>
+    </ol>
+
+    <h3>Улюблене місце в Києві</h3>
+    <p>
+        Одне з моїх улюблених місць у Києві – Національний ботанічний сад
+        імені М. М. Гришка. Тут приємно гуляти та відпочивати серед зелені,
+        а велика кількість різноманітних рослин робить прогулянку цікавою у різні пори року.
+    </p>
+
+    <a href="https://nbg.kyiv.ua/ua/home.html"
+       target="_blank"
+       rel="noopener noreferrer">
+        <img class="city-image"
+             src="images/botanical-garden.png"
+             alt="Національний ботанічний сад імені М. М. Гришка у Києві"
+             width="900">
+    </a>
+
+    <div id="added-image-container"></div>
+
+    <div class="image-controls">
+        <button type="button" id="add-image">Додати</button>
+        <button type="button" id="increase-image">Збільшити</button>
+        <button type="button" id="decrease-image">Зменшити</button>
+        <button type="button" id="delete-image">Видалити</button>
+    </div>
+</body>
+</html>
