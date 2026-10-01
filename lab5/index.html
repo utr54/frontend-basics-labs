@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Лабораторна робота №5 з дисципліни Основи Front-end технологій">
+  <title>Кашин Олександр Романович, ІК-44 – лабораторна робота №5; варіант 21, завдання 1: варіант 6, завдання 2: варіант 1</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="container">
+    <section>
+      <h2>Завдання 1</h2>
+
+      <form id="validationForm" autocomplete="off" novalidate>
+        <div class="form-row" data-field="fullName">
+          <label for="fullName">ПІБ</label>
+          <input id="fullName" name="fullName" type="text" placeholder="Шевчук О.Р.">
+          <small>Формат: ТТТТТТ Т.Т.</small>
+          <span class="error-message">Введіть 6 літер, пробіл і два ініціали з крапками.</span>
+        </div>
+
+        <div class="form-row" data-field="birthDate">
+          <label for="birthDate">Дата народження</label>
+          <input id="birthDate" name="birthDate" type="text" placeholder="21.05.2005">
+          <small>Формат: ЧЧ.ЧЧ.ЧЧЧЧ</small>
+          <span class="error-message">Введіть коректну дату у форматі ДД.ММ.РРРР.</span>
+        </div>
+
+        <div class="form-row" data-field="address">
+          <label for="address">Адреса</label>
+          <input id="address" name="address" type="text" placeholder="м. 123456">
+          <small>Формат: м. ЧЧЧЧЧЧ</small>
+          <span class="error-message">Формат адреси має бути: м. і 6 цифр.</span>
+        </div>
+
+        <div class="form-row" data-field="email">
+          <label for="email">E-mail</label>
+          <input id="email" name="email" type="text" placeholder="abcdef@abcde.com">
+          <small>Формат: тттттт@ттттт.com</small>
+          <span class="error-message">Введіть 6 малих латинських літер, @, 5 малих літер і .com.</span>
+        </div>
+
+        <div class="form-row" data-field="telegram">
+          <label for="telegram">Telegram</label>
+          <input id="telegram" name="telegram" type="text" placeholder="@a_bcdef">
+          <small>Формат: @Т_ТТТТТ</small>
+          <span class="error-message">Формат Telegram: @, 1 літера, _, 5 літер.</span>
+        </div>
+
+        <button type="submit">Перевірити дані</button>
+      </form>
+    </section>
+
+    <section>
+      <h2>Завдання 2</h2>
+
+      <div class="palette-row">
+        <label for="colorPicker">Колір:</label>
+        <input id="colorPicker" type="color" value="#4f46e5">
+      </div>
+
+      <table id="eventTable" aria-label="Таблиця подій 6 на 6">
+        <tbody></tbody>
+      </table>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
