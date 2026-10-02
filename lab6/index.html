@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Лабораторна робота №6. JavaScript. Формат JSON. API. Отримання даних із зовнішньої сторінки (fetch, promise)">
+    <title>Кашин Олександр Романович, ІК-44 – лабораторна робота №6, варіант 21</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <main class="container">
+        <h1>Лабораторна робота №6</h1>
+        <p class="subtitle">Отримання даних із Random User API</p>
+
+        <button id="load-user" type="button">
+            Отримати користувача
+        </button>
+
+        <p id="status" class="status" aria-live="polite"></p>
+
+        <section id="user-card" class="user-card" hidden>
+            <img
+                id="user-picture"
+                class="user-picture"
+                src=""
+                alt="Фото користувача"
+            >
+
+            <div class="user-info">
+                <h2 id="user-name"></h2>
+
+                <dl>
+                    <div class="info-row">
+                        <dt>Мобільний телефон:</dt>
+                        <dd id="user-cell"></dd>
+                    </div>
+
+                    <div class="info-row">
+                        <dt>Місто:</dt>
+                        <dd id="user-city"></dd>
+                    </div>
+
+                    <div class="info-row">
+                        <dt>Країна:</dt>
+                        <dd id="user-country"></dd>
+                    </div>
+                </dl>
+            </div>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>

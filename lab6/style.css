@@ -1,0 +1,125 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    font-family: Arial, sans-serif;
+    background-color: #f3f5f7;
+    color: #1f2933;
+}
+
+.container {
+    width: min(700px, calc(100% - 32px));
+    margin: 60px auto;
+    padding: 32px;
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+}
+
+h1 {
+    margin: 0 0 8px;
+    text-align: center;
+}
+
+.subtitle {
+    margin: 0 0 24px;
+    text-align: center;
+    color: #5d6772;
+}
+
+button {
+    display: block;
+    margin: 0 auto;
+    padding: 10px 18px;
+    border: none;
+    border-radius: 6px;
+    background-color: #2563eb;
+    color: #ffffff;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #1d4ed8;
+}
+
+button:disabled {
+    background-color: #94a3b8;
+    cursor: wait;
+}
+
+.status {
+    min-height: 24px;
+    margin: 16px 0;
+    text-align: center;
+}
+
+.user-card {
+    display: flex;
+    gap: 24px;
+    align-items: center;
+    padding: 24px;
+    border: 1px solid #d8dee4;
+    border-radius: 10px;
+    background-color: #f8fafc;
+}
+
+.user-card[hidden] {
+    display: none;
+}
+
+.user-picture {
+    width: 128px;
+    height: 128px;
+    flex-shrink: 0;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.user-info {
+    min-width: 0;
+}
+
+.user-info h2 {
+    margin: 0 0 16px;
+}
+
+dl {
+    margin: 0;
+}
+
+.info-row {
+    display: grid;
+    grid-template-columns: 170px 1fr;
+    gap: 8px;
+    margin-bottom: 8px;
+}
+
+dt {
+    font-weight: 700;
+}
+
+dd {
+    margin: 0;
+    overflow-wrap: anywhere;
+}
+
+@media (max-width: 560px) {
+    .container {
+        margin: 24px auto;
+        padding: 22px;
+    }
+
+    .user-card {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .info-row {
+        grid-template-columns: 1fr;
+        gap: 2px;
+    }
+}
