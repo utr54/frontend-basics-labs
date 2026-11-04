@@ -75,6 +75,13 @@
             font-weight: bold;
         }
 
+        .lab7-statuses {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 8px;
+        }
+
         .status {
             display: inline-block;
             padding: 6px 10px;
@@ -149,11 +156,13 @@
                 </li>
 
                 <li>
-                    <div class="lab-card">
+                    <a class="lab-card" href="https://utr54.github.io/frontend-lab7-react/">
                         <span class="lab-title">Лабораторна №7</span>
-                        <span class="status react">React · Окремий сайт</span>
-                        <span class="status pending">У розробці</span>
-                    </div>
+                        <div class="lab7-statuses">
+                            <span class="status react">React · Окремий сайт</span>
+                            <span class="status ready">Перейти до роботи →</span>
+                        </div>
+                    </a>
                 </li>
 
                 <li>
