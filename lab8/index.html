@@ -1,0 +1,227 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="SecureLock, a demonstration site for locksmith services and security equipment.">
+    <title>SecureLock – Кашин Олександр Романович, ІК-44, лабораторна робота №8, варіант 21</title>
+    <link rel="icon" href="assets/icons/key.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <header class="site-header" id="home" tabindex="-1">
+        <div class="container header-inner">
+            <a class="logo" href="#home">SecureLock</a>
+            <button class="menu-toggle" type="button" aria-controls="site-nav" aria-expanded="false" hidden>Menu</button>
+            <nav class="site-nav" id="site-nav" aria-label="Main navigation">
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#products">Shop</a></li>
+                    <li><a href="#statistics">Statistics</a></li>
+                    <li><a href="#quote">Contact</a></li>
+                </ul>
+            </nav>
+            <span class="header-phone"><span class="sr-only">Demo phone number </span>+1 202 555 0148</span>
+        </div>
+    </header>
+
+    <main id="main" tabindex="-1">
+        <section class="hero" aria-label="SecureLock highlights">
+            <img class="hero-photo" src="assets/images/lock-repair.webp" alt="Locksmith fitting a door lock with a hand tool" fetchpriority="high">
+            <div class="hero-copy">
+                <div class="hero-message" aria-live="polite" aria-atomic="true">
+                    <p class="eyebrow" id="hero-label">Expert locksmiths</p>
+                    <h1 id="hero-title">Reliable Locksmith Services for Homes and Businesses</h1>
+                </div>
+                <a class="button button-gold" href="#quote">Contact us</a>
+            </div>
+            <button class="slide-button slide-prev" type="button" aria-label="Previous slide" hidden></button>
+            <button class="slide-button slide-next" type="button" aria-label="Next slide" hidden></button>
+        </section>
+
+        <section class="quote container" id="quote" tabindex="-1" aria-labelledby="quote-title">
+            <div class="quote-box">
+                <h2 id="quote-title">Get a quote</h2>
+                <form id="quote-form">
+                    <div class="quote-fields">
+                        <div class="field">
+                            <label class="sr-only" for="quote-name">Name</label>
+                            <input id="quote-name" type="text" placeholder="Name" required maxlength="80" autocomplete="off">
+                        </div>
+                        <div class="field">
+                            <label class="sr-only" for="quote-phone">Phone</label>
+                            <input id="quote-phone" type="tel" placeholder="Phone" aria-describedby="phone-hint" required maxlength="28" autocomplete="off">
+                            <span class="sr-only" id="phone-hint">Enter 7 to 15 digits. Spaces, parentheses, hyphens and a leading plus sign are allowed.</span>
+                        </div>
+                        <div class="field field-select">
+                            <label class="sr-only" for="quote-service">Services</label>
+                            <select id="quote-service" required>
+                                <option value="" selected disabled>Services</option>
+                                <option>Locksmith Services</option>
+                                <option>Safes &amp; Locks</option>
+                                <option>Access Control</option>
+                                <option>Security Doors</option>
+                                <option>Alarm Systems</option>
+                                <option>Video Surveillance</option>
+                            </select>
+                        </div>
+                        <button class="button button-dark" type="submit" disabled>Get a quote</button>
+                    </div>
+                    <p class="form-message" id="quote-message" role="status"></p>
+                    <noscript><p class="form-message">Enable JavaScript to try the demo form.</p></noscript>
+                </form>
+            </div>
+        </section>
+
+        <section class="services container" id="services" tabindex="-1" aria-labelledby="services-title">
+            <div class="section-heading centered">
+                <p class="eyebrow">Our services</p>
+                <h2 id="services-title">Services we offer</h2>
+            </div>
+            <ul class="service-grid">
+                <li class="service">
+                    <span class="service-diamond" aria-hidden="true"><span class="icon" style="--icon: url('assets/icons/key.svg')"></span></span>
+                    <div>
+                        <h3>Locksmith Services</h3>
+                        <p>We install, repair and rekey door locks for homes, offices and shared entrances, including older doors.</p>
+                    </div>
+                </li>
+                <li class="service">
+                    <span class="service-diamond" aria-hidden="true"><span class="icon" style="--icon: url('assets/icons/vault.svg')"></span></span>
+                    <div>
+                        <h3>Safes &amp; Locks</h3>
+                        <p>Protect valuables and documents with fitted safes and dependable mechanical locks for doors and cabinets.</p>
+                    </div>
+                </li>
+                <li class="service">
+                    <span class="service-diamond" aria-hidden="true"><span class="icon" style="--icon: url('assets/icons/id-card.svg')"></span></span>
+                    <div>
+                        <h3>Access Control</h3>
+                        <p>Manage entry to your building with keypads, card readers and electronic locks for individual doors or shared entrances.</p>
+                    </div>
+                </li>
+                <li class="service">
+                    <span class="service-diamond" aria-hidden="true"><span class="icon" style="--icon: url('assets/icons/door-closed.svg')"></span></span>
+                    <div>
+                        <h3>Security Doors</h3>
+                        <p>Upgrade busy entrances with reinforced doors, sturdy frames and multipoint hardware for everyday use.</p>
+                    </div>
+                </li>
+                <li class="service">
+                    <span class="service-diamond" aria-hidden="true"><span class="icon" style="--icon: url('assets/icons/bell.svg')"></span></span>
+                    <div>
+                        <h3>Alarm Systems</h3>
+                        <p>Choose door sensors and motion detectors to monitor entrances, windows and rooms throughout your property.</p>
+                    </div>
+                </li>
+                <li class="service">
+                    <span class="service-diamond" aria-hidden="true"><span class="icon" style="--icon: url('assets/icons/video.svg')"></span></span>
+                    <div>
+                        <h3>Video Surveillance</h3>
+                        <p>Keep entrances and shared spaces in view with indoor and outdoor cameras and recording equipment.</p>
+                    </div>
+                </li>
+            </ul>
+        </section>
+
+        <div class="security-band">
+            <section class="about container" id="about" tabindex="-1" aria-labelledby="about-title">
+                <div class="about-photos">
+                    <img src="assets/images/dome-camera.webp" alt="Dome surveillance camera mounted on an exterior wall">
+                    <img src="assets/images/security-door.webp" alt="Security door with a metal handle and locking bolts">
+                    <img src="assets/images/access-keypad.webp" alt="Electronic keypad for door access">
+                </div>
+                <div class="about-copy">
+                    <div class="section-heading">
+                        <p class="eyebrow">Why choose us</p>
+                        <h2 id="about-title">Why choose us?</h2>
+                    </div>
+                    <p>From a single door lock to a building-wide access system, we help you choose hardware that fits your property and explain how to use it.</p>
+                    <ul class="benefits">
+                        <li>Safes and secure storage</li>
+                        <li>Lock repairs and replacement</li>
+                        <li>Residential and commercial locksmith services</li>
+                        <li>Advice on choosing and maintaining hardware</li>
+                        <li>Digital and electronic locks</li>
+                    </ul>
+                    <a class="button button-dark" href="#quote">Get a quote</a>
+                </div>
+            </section>
+
+            <section class="statistics container" id="statistics" tabindex="-1" aria-labelledby="statistics-title">
+                <h2 class="sr-only" id="statistics-title">Illustrative figures for SecureLock</h2>
+                <ul class="stat-grid">
+                    <li>
+                        <span class="icon" style="--icon: url('assets/icons/users.svg')" aria-hidden="true"></span>
+                        <strong>25k+</strong>
+                        <span>Happy customers</span>
+                    </li>
+                    <li>
+                        <span class="icon" style="--icon: url('assets/icons/globe.svg')" aria-hidden="true"></span>
+                        <strong>16</strong>
+                        <span>Branches worldwide</span>
+                    </li>
+                    <li>
+                        <span class="icon" style="--icon: url('assets/icons/shield-halved.svg')" aria-hidden="true"></span>
+                        <strong>28k+</strong>
+                        <span>Completed projects</span>
+                    </li>
+                    <li>
+                        <span class="icon" style="--icon: url('assets/icons/award.svg')" aria-hidden="true"></span>
+                        <strong>36</strong>
+                        <span>Awards won</span>
+                    </li>
+                    <li>
+                        <span class="icon" style="--icon: url('assets/icons/basket-shopping.svg')" aria-hidden="true"></span>
+                        <strong>74k+</strong>
+                        <span>Products sold</span>
+                    </li>
+                </ul>
+            </section>
+        </div>
+
+        <section class="products container" id="products" tabindex="-1" aria-labelledby="products-title">
+            <div class="products-header">
+                <div class="section-heading">
+                    <p class="eyebrow">Our products</p>
+                    <h2 id="products-title">Locksmith store</h2>
+                </div>
+                <a class="button button-outline" href="#quote">Request product info</a>
+            </div>
+            <ul class="product-grid">
+                <li class="product">
+                    <div class="product-photo"><img src="assets/images/product-camera.webp" width="384" height="384" alt="Bullet-style surveillance camera on its mounting bracket"></div>
+                    <div class="product-meta"><span>$69.00</span><span class="rating"><span class="sr-only">5 out of 5 stars</span><span aria-hidden="true"></span></span></div>
+                    <h3>Bullet CCTV Camera</h3>
+                </li>
+                <li class="product">
+                    <div class="product-photo"><img src="assets/images/product-mortise.webp" width="384" height="384" alt="Steel mortise lock body with a cylinder opening"></div>
+                    <div class="product-meta"><span>$34.00</span><span class="rating"><span class="sr-only">5 out of 5 stars</span><span aria-hidden="true"></span></span></div>
+                    <h3>Steel Mortise Lock</h3>
+                </li>
+                <li class="product">
+                    <div class="product-photo"><img src="assets/images/product-padlock.webp" width="384" height="384" alt="Combination padlock with numbered dials"></div>
+                    <div class="product-meta"><span>$18.00</span><span class="rating"><span class="sr-only">5 out of 5 stars</span><span aria-hidden="true"></span></span></div>
+                    <h3>Combination Padlock</h3>
+                </li>
+                <li class="product">
+                    <div class="product-photo"><img src="assets/images/product-electric.webp" width="384" height="384" alt="Electromechanical mortise lock with a steel faceplate"></div>
+                    <div class="product-meta"><span>$89.00</span><span class="rating"><span class="sr-only">5 out of 5 stars</span><span aria-hidden="true"></span></span></div>
+                    <h3>Electromechanical Lock</h3>
+                </li>
+                <li class="product">
+                    <div class="product-photo"><img src="assets/images/product-smart.webp" width="384" height="384" alt="Smart electronic door lock with a numeric keypad"></div>
+                    <div class="product-meta"><span>$129.00</span><span class="rating"><span class="sr-only">5 out of 5 stars</span><span aria-hidden="true"></span></span></div>
+                    <h3>Smart Keypad Lock</h3>
+                </li>
+            </ul>
+            <p class="demo-note">SecureLock is a school project. Contact details, figures, prices and ratings are illustrative.</p>
+        </section>
+    </main>
+</body>
+</html>
