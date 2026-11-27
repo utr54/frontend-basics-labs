@@ -72,7 +72,10 @@ function validateContactFields() {
 
     const phone = phoneInput.value.trim();
     const digitCount = phone.replace(/\D/g, '').length;
-    const validPhone = /^\+?[\d\s()-]+$/.test(phone) && digitCount >= 7 && digitCount <= 15;
+    const validPhone =
+        /^\+?(?:\d+|\(\d+\))(?:[ -]?(?:\d+|\(\d+\)))*$/.test(phone) &&
+        digitCount >= 7 &&
+        digitCount <= 15;
     phoneInput.setCustomValidity(
         phoneInput.value && !validPhone ? 'Enter a phone number with 7 to 15 digits.' : ''
     );
